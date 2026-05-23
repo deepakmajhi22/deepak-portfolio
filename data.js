@@ -11,7 +11,7 @@ export const portfolioData = {
     },
     experience: [
         {
-            id: "stop-1",
+            id: "station-1",
             badge: "STOP 01 &middot; CURRENT ROLE",
             time: "Jun 2025 - Present",
             company: "Amazon SDE",
@@ -28,7 +28,7 @@ export const portfolioData = {
             threshold: 0.10
         },
         {
-            id: "stop-2",
+            id: "station-2",
             badge: "STOP 02 &middot; WORK HISTORY",
             time: "Jan 2025 - Jun 2025",
             company: "Amazon SDE Intern",
@@ -46,7 +46,7 @@ export const portfolioData = {
             threshold: 0.40
         },
         {
-            id: "stop-3",
+            id: "station-3",
             badge: "STOP 03 &middot; EDUCATION",
             time: "Dec 2021 - Jun 2025",
             company: "MNIT Jaipur",
