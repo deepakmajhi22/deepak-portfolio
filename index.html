@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepak Majhi | SDE at Amazon | Portfolio</title>
+    
+    <!-- SEO Optimization -->
+    <meta name="description" content="Professional portfolio of Deepak Majhi, Software Development Engineer at Amazon. B.Tech from NIT Jaipur (ECE). Specializing in distributed systems, scalability, and robust system design.">
+    <meta name="keywords" content="Deepak Majhi, Amazon SDE, Software Development Engineer, Portfolio, NIT Jaipur, MNIT Jaipur, Flipkart GRiD, System Design, Software Engineering, Hyderabad">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Deepak Majhi | SDE at Amazon">
+    <meta property="og:description" content="Professional portfolio of Deepak Majhi, SDE at Amazon. Graduated from NIT Jaipur. High-performance microservices, system design, and distributed architectures.">
+    <meta property="og:type" content="website">
+    
+    <!-- Typography: Inter and JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome 6 for robust and popular brand icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Dynamic Responsive Spotlight Glow & Particles Background -->
+    <div class="spotlight-bg"></div>
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Floating Futuristic Navigation Header -->
+    <header class="glass-header" id="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">&lt;</span>DM<span class="logo-accent"> /&gt;</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#about" class="nav-link active">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Achievements</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon icon-dark"></i>
+                    <i class="fa-solid fa-sun icon-light"></i>
+                </button>
+                
+                <!-- Quick Contact / CTA -->
+                <a href="https://www.linkedin.com/in/deepak-majhi22/" target="_blank" rel="noopener noreferrer" class="nav-cta-btn">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Dropdown Nav Menu -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#projects" class="mobile-link">Achievements</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+            <a href="https://www.linkedin.com/in/deepak-majhi22/" target="_blank" rel="noopener noreferrer" class="mobile-nav-cta">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn Profile</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        
+        <!-- HERO SECTION -->
+        <section id="about" class="hero-section">
+            <div class="section-container">
+                <div class="hero-content">
+                    <div class="badge-container scroll-reveal">
+                        <span class="status-indicator"></span>
+                        <span class="badge-text">SDE @ Amazon</span>
+                    </div>
+                    
+                    <h1 class="hero-title scroll-reveal">
+                        Hi, I'm <span class="highlight-text animate-glow">Deepak Majhi</span>
+                    </h1>
+                    
+                    <div class="terminal-text-container scroll-reveal">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-typer" id="typing-text">Software Development Engineer</span>
+                        <span class="terminal-cursor">|</span>
+                    </div>
+                    
+                    <p class="hero-desc scroll-reveal">
+                        Software Development Engineer at <strong>Amazon</strong> with experience building and delivering scalable software systems. Passionate about system design, distributed architectures, and solving complex engineering challenges involving scale and reliability. Graduated B.Tech from <strong>NIT Jaipur</strong> (Malaviya National Institute of Technology).
+                    </p>
+                    
+                    <div class="hero-actions scroll-reveal">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Explore Achievements</span>
+                            <i class="fa-solid fa-award"></i>
+                        </a>
+                        <a href="#experience" class="btn btn-secondary">
+                            <span>View Experience</span>
+                            <i class="fa-solid fa-briefcase"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-interactive scroll-reveal">
+                    <!-- Glassmorphic Visual Tech Card representing SDE Architecture -->
+                    <div class="tech-cube-container">
+                        <div class="glass-tech-card">
+                            <div class="card-header">
+                                <div class="dot red"></div>
+                                <div class="dot yellow"></div>
+                                <div class="dot green"></div>
+                                <span class="card-title">deepak-majhi-profile.sh</span>
+                            </div>
+                            <div class="card-code">
+                                <p><span class="code-keyword">package</span> mnit.jaipur.alumni;</p>
+                                <p><span class="code-keyword">public</span> <span class="code-keyword">class</span> <span class="code-class">DeepakMajhi</span> {</p>
+                                <p class="code-indent"><span class="code-keyword">private</span> <span class="code-type">final</span> <span class="code-class">String</span> <span class="code-field">role</span> = <span class="code-string">"SDE @ Amazon"</span>;</p>
+                                <p class="code-indent"><span class="code-keyword">private</span> <span class="code-type">final</span> <span class="code-class">String</span> <span class="code-field">college</span> = <span class="code-string">"NIT Jaipur"</span>;</p>
+                                <p class="code-indent"><span class="code-keyword">public</span> <span class="code-type">void</span> <span class="code-method">executeCareerPath</span>() {</p>
+                                <p class="code-indent-2"><span class="code-class">AWS</span>.<span class="code-method">deployScalableSystems</span>();</p>
+                                <p class="code-indent-2"><span class="code-class">SystemDesign</span>.<span class="code-method">focusOnReliability</span>();</p>
+                                <p class="code-indent-2"><span class="code-class">System</span>.<span class="code-field">out</span>.<span class="code-method">println</span>(<span class="code-string">"Scale optimized. Uptime maxed."</span>);</p>
+                                <p class="code-indent">}</p>
+                                <p>}</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="footer-stat"><i class="fa-solid fa-location-dot"></i> hyderabad-in</span>
+                                <span class="footer-stat"><i class="fa-solid fa-check"></i> compiled</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS BANNER -->
+        <section class="stats-section">
+            <div class="stats-container">
+                <div class="stat-card glass-panel scroll-reveal">
+                    <div class="stat-icon-wrapper purple-glow">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number" data-target="220">220K+</h3>
+                        <p class="stat-label">Annual Interactions Impacted</p>
+                    </div>
+                </div>
+
+                <div class="stat-card glass-panel scroll-reveal">
+                    <div class="stat-icon-wrapper cyan-glow">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number" data-target="8.07">8.07</h3>
+                        <p class="stat-label">B.Tech GPA (NIT Jaipur)</p>
+                    </div>
+                </div>
+
+                <div class="stat-card glass-panel scroll-reveal">
+                    <div class="stat-icon-wrapper purple-glow">
+                        <i class="fa-solid fa-circle-nodes"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number" data-target="500">500+</h3>
+                        <p class="stat-label">Professional Connections</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HIGHWAY CAREER ROADMAP SECTION (EXPERIENCE & EDUCATION) -->
+        <section id="experience" class="highway-section">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">&lt;career_highway&gt;</span>
+                <h2 class="section-title">Career Highway</h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <!-- Main interactive vertical highway track -->
+            <div class="highway-track-container">
+                
+                <!-- Curved Highway SVG path (generated dynamically by JS) -->
+                <svg class="highway-road-svg" width="100%" height="100%" preserveAspectRatio="none">
+                    <!-- Definitions for metallic gradients -->
+                    <defs>
+                        <linearGradient id="road-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#18181b" />
+                            <stop offset="50%" stop-color="#0f0f13" />
+                            <stop offset="100%" stop-color="#18181b" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Asphalt Road Body (drawn dynamically) -->
+                    <path class="asphalt-path" d="" fill="none" stroke="url(#road-grad)" stroke-width="66" stroke-linecap="round" />
+                    
+                    <!-- Left Edge Line (Metallic Silver) -->
+                    <path class="left-edge-path" d="" fill="none" stroke="#71717a" stroke-width="2.5" />
+                    
+                    <!-- Right Edge Line (Metallic Silver) -->
+                    <path class="right-edge-path" d="" fill="none" stroke="#71717a" stroke-width="2.5" />
+                    
+                    <!-- Center Lane Divider (Dashed) -->
+                    <path class="center-line-path" d="" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="12,18" opacity="0.3" />
+                </svg>
+
+                <!-- The Vertical Cafe Racer Rider -->
+                <div id="motorcycle-rider">
+                    <!-- Custom Top-view Retro-Modern Custom Cafe Racer SVG -->
+                    <svg viewBox="0 0 60 100" width="100%" height="100%">
+                        <!-- Rear spoked wheel -->
+                        <rect x="25" y="10" width="10" height="25" rx="3" fill="#18181b" stroke="#3f3f46" stroke-width="1.5" />
+                        <!-- Spokes details -->
+                        <line x1="30" y1="12" x2="30" y2="33" stroke="#71717a" stroke-width="1" />
+                        <line x1="26" y1="22" x2="34" y2="22" stroke="#71717a" stroke-width="1" />
+                        
+                        <!-- Front spoked wheel -->
+                        <rect x="27" y="80" width="6" height="18" rx="2" fill="#18181b" stroke="#3f3f46" stroke-width="1.5" />
+                        <!-- Spokes details -->
+                        <line x1="30" y1="81" x2="30" y2="97" stroke="#71717a" stroke-width="1" />
+                        
+                        <!-- Symmetrical Vintage Megaphone Exhaust Pipes -->
+                        <!-- Left Exhaust -->
+                        <path d="M 21 42 L 18 20 C 18 16 22 16 22 20 L 23 42 Z" fill="#71717a" stroke="#d4d4d8" stroke-width="1" />
+                        <!-- Right Exhaust -->
+                        <path d="M 39 42 L 42 20 C 42 16 38 16 38 20 L 37 42 Z" fill="#71717a" stroke="#d4d4d8" stroke-width="1" />
+                        
+                        <!-- Vintage chrome exhaust tips -->
+                        <circle cx="20" cy="18" r="2" fill="#27272a" stroke="#a1a1aa" stroke-width="0.8" />
+                        <circle cx="40" cy="18" r="2" fill="#27272a" stroke="#a1a1aa" stroke-width="0.8" />
+                        
+                        <!-- Chassis Frame -->
+                        <rect x="22" y="30" width="16" height="42" rx="4" fill="#09090b" stroke="#27272a" stroke-width="2" />
+                        
+                        <!-- Exposed Air-Cooled Engine Blocks (Boxer-twin style fins extending symmetrically) -->
+                        <!-- Left Cylinder Fin Block -->
+                        <rect x="11" y="44" width="12" height="10" rx="1.5" fill="#27272a" stroke="#71717a" stroke-width="1" />
+                        <line x1="12" y1="46" x2="22" y2="46" stroke="#e4e4e7" stroke-width="1" />
+                        <line x1="12" y1="49" x2="22" y2="49" stroke="#e4e4e7" stroke-width="1" />
+                        <line x1="12" y1="52" x2="22" y2="52" stroke="#e4e4e7" stroke-width="1" />
+                        <!-- Left Spark Plug Cap -->
+                        <rect x="8" y="47" width="3" height="4" rx="0.5" fill="#a1a1aa" />
+                        
+                        <!-- Right Cylinder Fin Block -->
+                        <rect x="37" y="44" width="12" height="10" rx="1.5" fill="#27272a" stroke="#71717a" stroke-width="1" />
+                        <line x1="38" y1="46" x2="48" y2="46" stroke="#e4e4e7" stroke-width="1" />
+                        <line x1="38" y1="49" x2="48" y2="49" stroke="#e4e4e7" stroke-width="1" />
+                        <line x1="38" y1="52" x2="48" y2="52" stroke="#e4e4e7" stroke-width="1" />
+                        <!-- Right Spark Plug Cap -->
+                        <rect x="49" y="47" width="3" height="4" rx="0.5" fill="#a1a1aa" />
+                        
+                        <!-- Fuel Tank (Teardrop Shape, Charcoal Gray with Tan knee grips) -->
+                        <path d="M 22 52 C 20 69 24 77 30 77 C 36 77 40 69 38 52 C 37 46 23 46 22 52 Z" fill="#18181b" stroke="#3f3f46" stroke-width="1.5" />
+                        <!-- Knee Pads -->
+                        <path d="M 23 55 C 22 62 23 66 25 68 C 24 62 23 58 23 55 Z" fill="#27272a" />
+                        <path d="M 37 55 C 38 62 37 66 35 68 C 36 62 37 58 37 55 Z" fill="#27272a" />
+                        <!-- Chrome Fuel Cap -->
+                        <circle cx="33" cy="58" r="2.5" fill="#d4d4d8" stroke="#71717a" stroke-width="0.8" />
+                        
+                        <!-- Symmetrical Custom Ribbed Seat (Stitched Tan/Brown Leather) -->
+                        <path d="M 24 28 C 24 45 25 50 30 50 C 35 50 36 45 36 28 L 33 24 C 32 23 28 23 27 24 Z" fill="#854d0e" stroke="#5f3e07" stroke-width="1" />
+                        <!-- Horizontal Rib Stitching -->
+                        <line x1="24.5" y1="30" x2="35.5" y2="30" stroke="#452a03" stroke-width="1" />
+                        <line x1="24.8" y1="34" x2="35.2" y2="34" stroke="#452a03" stroke-width="1" />
+                        <line x1="25.0" y1="38" x2="35.0" y2="38" stroke="#452a03" stroke-width="1" />
+                        <line x1="25.2" y1="42" x2="34.8" y2="42" stroke="#452a03" stroke-width="1" />
+                        <line x1="25.5" y1="46" x2="34.5" y2="46" stroke="#452a03" stroke-width="1" />
+                        
+                        <!-- Vintage Clubman Handlebars -->
+                        <!-- Main Chrome Bar -->
+                        <path d="M 12 76 L 27 79 M 48 76 L 33 79" stroke="#98989f" stroke-width="2.5" stroke-linecap="round" />
+                        <!-- Tan Leather Handgrips -->
+                        <rect x="12" y="73" width="2" height="7" rx="0.5" fill="#854d0e" stroke="#5f3e07" stroke-width="0.5" />
+                        <rect x="46" y="73" width="2" height="7" rx="0.5" fill="#854d0e" stroke="#5f3e07" stroke-width="0.5" />
+                        
+                        <!-- Classic Chrome Bar-End Round Mirrors -->
+                        <!-- Left Mirror -->
+                        <line x1="12" y1="76" x2="8" y2="76" stroke="#71717a" stroke-width="1" />
+                        <circle cx="7" cy="76" r="2.5" fill="#d4d4d8" stroke="#71717a" stroke-width="0.8" />
+                        <!-- Right Mirror -->
+                        <line x1="48" y1="76" x2="52" y2="76" stroke="#71717a" stroke-width="1" />
+                        <circle cx="53" cy="76" r="2.5" fill="#d4d4d8" stroke="#71717a" stroke-width="0.8" />
+                        
+                        <!-- Triple Tree Clamp & Steering Stem -->
+                        <rect x="26" y="75" width="8" height="6" rx="1.5" fill="#3f3f46" stroke="#71717a" stroke-width="1" />
+                        <circle cx="30" cy="78" r="1.5" fill="#d4d4d8" />
+                        
+                        <!-- Symmetrical Front Fork Struts -->
+                        <line x1="25" y1="75" x2="25" y2="85" stroke="#71717a" stroke-width="2" />
+                        <line x1="35" y1="75" x2="35" y2="85" stroke="#71717a" stroke-width="2" />
+                        
+                        <!-- Vintage Circular Chrome Headlight -->
+                        <circle cx="30" cy="88" r="4.5" fill="#27272a" stroke="#d4d4d8" stroke-width="1.2" />
+                        <!-- Bright white warm glass bulb -->
+                        <circle cx="30" cy="88" r="3.2" fill="#fffbef" />
+                        <path d="M 28 86 Q 30 87 32 86" stroke="#eab308" stroke-width="0.5" fill="none" />
+                    </svg>
+                    <!-- Small pulsing exhaust particle glow -->
+                    <div class="exhaust-smoke"></div>
+                </div>
+
+                <!-- Stop 1 (Left Side): SDE Full-Time (Peak of Career at Top!) -->
+                <div class="highway-station left-station station-1 scroll-reveal" data-threshold="0.10">
+                    <div class="station-glow-hub"></div>
+                    <div class="station-card glass-panel">
+                        <div class="station-header">
+                            <span class="station-badge">STOP 01 &middot; FULL-TIME</span>
+                            <span class="station-time">Jul 2025 - Present</span>
+                        </div>
+                        <div class="company-brand">
+                            <div class="amazon-logo-wrapper">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M 4 15 Q 12 21 20 15" fill="none" stroke="#f97316" stroke-width="2.8" stroke-linecap="round"/>
+                                    <path d="M 17 14 L 20 15 L 18 18" fill="none" stroke="#f97316" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span class="company-name">Amazon SDE</span>
+                        </div>
+                        <h3 class="role-title">Software Development Engineer (SDE)</h3>
+                        <span class="role-location"><i class="fa-solid fa-location-dot"></i> Hyderabad, India &middot; Full-time</span>
+                        <p class="role-desc" style="margin-top: 10px;">
+                            Building and delivering highly scalable software systems and optimizing system reliability across massive distributed cloud environments.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Scalable Systems</span>
+                            <span class="tech-tag">AWS Cloud</span>
+                            <span class="tech-tag">System Design</span>
+                            <span class="tech-tag">Distributed Architectures</span>
+                            <span class="tech-tag">Java</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stop 2 (Right Side): Amazon SDE Intern -->
+                <div class="highway-station right-station station-2 scroll-reveal" data-threshold="0.40">
+                    <div class="station-glow-hub"></div>
+                    <div class="station-card glass-panel">
+                        <div class="station-header">
+                            <span class="station-badge">STOP 02 &middot; INTERNSHIP</span>
+                            <span class="station-time">Jul 2024 - Dec 2024</span>
+                        </div>
+                        <div class="company-brand">
+                            <div class="amazon-logo-wrapper">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M 4 15 Q 12 21 20 15" fill="none" stroke="#f97316" stroke-width="2.8" stroke-linecap="round"/>
+                                    <path d="M 17 14 L 20 15 L 18 18" fill="none" stroke="#f97316" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span class="company-name">Amazon SDE Intern</span>
+                        </div>
+                        <h3 class="role-title">Software Development Engineer Intern</h3>
+                        <span class="role-location"><i class="fa-solid fa-location-dot"></i> Hyderabad, India &middot; On-site</span>
+                        <ul class="role-achievements" style="margin-top: 10px;">
+                            <li>Designed and delivered production features that improved customer-facing workflows, impacting <strong>220K+</strong> annual customer interactions.</li>
+                            <li>Collaborated across multiple teams and systems to drive integration and schema improvements, reducing migration effort and improving engineering efficiency.</li>
+                            <li>Implemented idempotent processing mechanisms for large-scale workflows, improving data reliability across millions of weekly records.</li>
+                            <li>Took end-to-end ownership across design, implementation, testing, rollout planning, and cross-team execution.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">AWS ECS / Lambda</span>
+                            <span class="tech-tag">DynamoDB</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Idempotent Processing</span>
+                            <span class="tech-tag">Schema Integration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stop 3 (Left Side): B.Tech Education (Roots at the bottom!) -->
+                <div class="highway-station left-station station-3 scroll-reveal" data-threshold="0.72">
+                    <div class="station-glow-hub"></div>
+                    <div class="station-card glass-panel">
+                        <div class="station-header">
+                            <span class="station-badge">STOP 03 &middot; EDUCATION</span>
+                            <span class="station-time">Dec 2021 - Jun 2025</span>
+                        </div>
+                        <div class="company-brand">
+                            <i class="fa-solid fa-graduation-cap brand-icon"></i>
+                            <span class="company-name">MNIT Jaipur</span>
+                        </div>
+                        <h3 class="role-title">Bachelor of Technology (B.Tech)</h3>
+                        <span class="role-location">Electronics & Communication Engineering &middot; GPA: 8.07 / 10.0</span>
+                        <p class="role-desc" style="margin-top: 10px;">
+                            Acquired rigorous engineering expertise. Focused on Data Structures, Algorithms, Operating Systems, Graph Theory, Analog/Digital IC Design, Digital Signal Processing, and Communication Systems.
+                        </p>
+                        <div class="role-achievements" style="font-size: 0.9rem; margin-top: 10px;">
+                            <strong>Involvement:</strong>
+                            <ul style="list-style-type: circle; padding-left: 20px; margin-top: 5px; color: var(--text-secondary);">
+                                <li>Web Development Team Member at MNIT Alumni Community (ALCOM).</li>
+                                <li>Student Placement Coordinator for the 2024-25 placement cycles.</li>
+                                <li>DIY Coding section mentor at Think India & National Service Scheme volunteer.</li>
+                            </ul>
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Data Structures</span>
+                            <span class="tech-tag">Algorithms</span>
+                            <span class="tech-tag">Operating Systems</span>
+                            <span class="tech-tag">Verilog HDL</span>
+                            <span class="tech-tag">IC Design (Cadence)</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SKILLS MATRIX SECTION -->
+        <section id="skills" class="skills-section">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">&lt;tech_stack&gt;</span>
+                <h2 class="section-title">Core Competencies</h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <div class="skills-grid">
+                
+                <!-- Category 1: Systems & Architecture -->
+                <div class="skills-category glass-panel scroll-reveal">
+                    <div class="category-header">
+                        <i class="fa-solid fa-microchip category-icon text-purple"></i>
+                        <h3>Systems & Design</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">System Design & Scalability</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill fill-purple" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Distributed Systems</span>
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill fill-purple" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Microservices & REST APIs</span>
+                                <span class="skill-percent">94%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill fill-purple" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Low-Level & Object Oriented Design</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill fill-purple" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Languages -->
+                <div class="skills-category glass-panel scroll-reveal">
+                    <div class="category-header">
+                        <i class="fa-solid fa-code category-icon text-cyan"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill fill-cyan" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">C++</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill fill-cyan" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill fill-cyan" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript & SQL</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill fill-cyan" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Cloud & Technologies -->
+                <div class="skills-category glass-panel scroll-reveal">
+                    <div class="category-header">
+                        <i class="fa-solid fa-cloud category-icon text-purple"></i>
+                        <h3>Tools & Cloud</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Amazon Web Services (AWS)</span>
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill fill-purple" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React.js & Web Frontends</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill fill-purple" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Linux Command Line</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill fill-purple" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git & Code Versioning</span>
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill fill-purple" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 4: SDE Foundations -->
+                <div class="skills-category glass-panel scroll-reveal">
+                    <div class="category-header">
+                        <i class="fa-solid fa-terminal category-icon text-cyan"></i>
+                        <h3>SDE Foundations</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Data Structures</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill fill-cyan" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Algorithms</span>
+                                <span class="skill-percent">94%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill fill-cyan" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Problem Solving</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill fill-cyan" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Software Development Lifecycle</span>
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill fill-cyan" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FEATURED PROJECTS & ACHIEVEMENTS SECTION -->
+        <section id="projects" class="projects-section">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">&lt;honors_and_milestones&gt;</span>
+                <h2 class="section-title">Honors & Achievements</h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <div class="projects-grid">
+                
+                <!-- Achievement 1: Flipkart GRiD -->
+                <div class="project-card glass-panel scroll-reveal">
+                    <div class="project-image-container">
+                        <div class="project-glow-bg bg-purple"></div>
+                        <div class="project-placeholder-preview">
+                            <i class="fa-solid fa-award project-preview-icon"></i>
+                            <span class="project-preview-tag">FLIPKART GRID 5.0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-info">
+                        <div class="project-header">
+                            <span class="project-tag">Certificate of Merit</span>
+                            <div class="project-links">
+                                <a href="https://github.com/deepakmajhi22" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Flipkart GRiD 5.0 Software Track</h3>
+                        <p class="project-desc">
+                            Awarded the <strong>Certificate of Merit</strong> for qualifying in the E-Commerce Qualifier and successfully advancing to the Level 2 Submission Round. Engineered an innovative <strong>E-Commerce Recommendation System</strong> utilizing advanced algorithms to improve customer retention.
+                        </p>
+                        <div class="project-tech-badges">
+                            <span>Algorithms</span>
+                            <span>E-Commerce System</span>
+                            <span>Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievement 2: Robotics Space -->
+                <div class="project-card glass-panel scroll-reveal">
+                    <div class="project-image-container">
+                        <div class="project-glow-bg bg-cyan"></div>
+                        <div class="project-placeholder-preview">
+                            <i class="fa-solid fa-robot project-preview-icon"></i>
+                            <span class="project-preview-tag">SPACE ROBOTICS</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-info">
+                        <div class="project-header">
+                            <span class="project-tag">Robotics Intern</span>
+                            <div class="project-links">
+                                <a href="#" aria-label="Live Demo Link"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Virtual Robotics Simulation</h3>
+                        <p class="project-desc">
+                            Completed a Virtual Robotics Internship at <strong>SPACE</strong> (Scientific Platforms And Cosmic Explorations). Developed, constructed, and successfully ran simulation environments for advanced functional robotic designs.
+                        </p>
+                        <div class="project-tech-badges">
+                            <span>Robotics</span>
+                            <span>Simulation Logic</span>
+                            <span>C++ / Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievement 3: Source Code IITKGP -->
+                <div class="project-card glass-panel scroll-reveal">
+                    <div class="project-image-container">
+                        <div class="project-glow-bg bg-purple"></div>
+                        <div class="project-placeholder-preview">
+                            <i class="fa-solid fa-terminal project-preview-icon"></i>
+                            <span class="project-preview-tag">IIT KHARAGPUR</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-info">
+                        <div class="project-header">
+                            <span class="project-tag">National Coding</span>
+                            <div class="project-links">
+                                <a href="#" aria-label="Event Details"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Kshitij Source Code Event</h3>
+                        <p class="project-desc">
+                            Awarded participation certificates for <strong>Source Code</strong>, a nationwide competitive coding event held during Kshitij, the annual technical fest of <strong>IIT Kharagpur</strong>, showcasing advanced logical problem-solving skills under time-critical bounds.
+                        </p>
+                        <div class="project-tech-badges">
+                            <span>Competitive Coding</span>
+                            <span>Algorithms</span>
+                            <span>Data Structures</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT PORTAL SECTION -->
+        <section id="contact" class="contact-section">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">&lt;handshake&gt;</span>
+                <h2 class="section-title">Secure Portal</h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <div class="contact-container">
+                <!-- Info Cards -->
+                <div class="contact-info-panel scroll-reveal">
+                    <div class="contact-card glass-panel">
+                        <div class="info-icon text-purple">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="info-details">
+                            <h4>Direct Email</h4>
+                            <p>dmdeepakmajhi@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card glass-panel">
+                        <div class="info-icon text-cyan">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <div class="info-details">
+                            <h4>LinkedIn Connection</h4>
+                            <p>linkedin.com/in/deepak-majhi22</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card glass-panel">
+                        <div class="info-icon text-purple">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+                        <div class="info-details">
+                            <h4>Operational Base</h4>
+                            <p>Hyderabad, Telangana, India (On-site / Hybrid)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Panel -->
+                <div class="contact-form-panel glass-panel scroll-reveal">
+                    <form id="contact-form" class="futuristic-form">
+                        <div class="form-row">
+                            <div class="input-wrapper">
+                                <label for="name">Sender Name</label>
+                                <div class="input-container">
+                                    <i class="fa-solid fa-user input-icon"></i>
+                                    <input type="text" id="name" required placeholder="Gajala (Washington D.C.)">
+                                </div>
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="email">Return Channel (Email)</label>
+                                <div class="input-container">
+                                    <i class="fa-solid fa-envelope input-icon"></i>
+                                    <input type="email" id="email" required placeholder="gajala@sonicsolutions.com">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="subject">Transmission Subject</label>
+                            <div class="input-container">
+                                <i class="fa-solid fa-circle-info input-icon"></i>
+                                <input type="text" id="subject" required placeholder="Scalability Collaboration Opportunity">
+                            </div>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="message">Message Payload</label>
+                            <div class="input-container select-textarea">
+                                <i class="fa-solid fa-comment-dots input-icon textarea-icon"></i>
+                                <textarea id="message" required placeholder="Initialize conversation regarding system design..." rows="5"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Transmit Message</span>
+                            <i class="fa-solid fa-paper-plane send-icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Transmit Success Modal Overlay -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-card glass-panel">
+            <div class="modal-icon-wrapper">
+                <i class="fa-solid fa-circle-check modal-icon"></i>
+            </div>
+            <h3>Transmission Confirmed</h3>
+            <p>Your message package has been encrypted and sent to Deepak Majhi's port successfully. Standby for asynchronous return response.</p>
+            <button class="btn btn-primary" id="close-modal">Acknowledge</button>
+        </div>
+    </div>
+
+    <!-- Minimal Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="copyright">&copy; 2026 Deepak Majhi. Created with full custom-tech glassmorphic specs.</p>
+            <div class="footer-links">
+                <a href="https://github.com/deepakmajhi22" target="_blank" rel="noopener noreferrer" aria-label="GitHub Portal"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/deepak-majhi22" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Portal"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:dmdeepakmajhi@gmail.com" aria-label="Email Portal"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
