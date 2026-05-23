@@ -645,6 +645,45 @@ button, input, textarea {
     gap: 4px;
 }
 
+/* --- Glass Tech Card Light Mode Overrides --- */
+[data-theme="light"] .glass-tech-card {
+    background: rgba(255, 255, 255, 0.75);
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08), 0 0 30px rgba(var(--accent-primary-rgb), 0.03);
+}
+
+[data-theme="light"] .glass-tech-card:hover {
+    border-color: rgba(var(--accent-secondary-rgb), 0.2);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12), 0 0 40px rgba(var(--accent-secondary-rgb), 0.08);
+}
+
+[data-theme="light"] .card-header {
+    background: rgba(0, 0, 0, 0.02);
+    border-bottom-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .card-title {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .card-code {
+    color: #383a42; /* One Light base text */
+}
+
+[data-theme="light"] .code-keyword { color: #a626a4; }
+[data-theme="light"] .code-class { color: #c18401; }
+[data-theme="light"] .code-annotation { color: #986801; }
+[data-theme="light"] .code-method { color: #4078f2; }
+[data-theme="light"] .code-field { color: #e45649; }
+[data-theme="light"] .code-string { color: #50a14f; }
+[data-theme="light"] .code-type { color: #0184bc; }
+
+[data-theme="light"] .card-footer {
+    background: rgba(0, 0, 0, 0.01);
+    border-top-color: rgba(0, 0, 0, 0.06);
+    color: var(--text-tertiary);
+}
+
 /* --- STATS SECTION --- */
 .stats-section {
     padding: 60px 0;
