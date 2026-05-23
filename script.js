@@ -351,9 +351,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const successModal = document.getElementById('success-modal');
     const closeModalBtn = document.getElementById('close-modal');
 
-    // DEVELOPER ACTION REQUIRED: Replace this endpoint with your free Formspree ID
-    // Register at https://formspree.io/ to get your secure form ID instantly!
-    const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORMSPREE_ID";
+    // out-of-the-box functional FormSubmit.co AJAX email routing for dmdeepakmajhi@gmail.com
+    const FORM_ENDPOINT = "https://formsubmit.co/ajax/dmdeepakmajhi@gmail.com";
 
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
