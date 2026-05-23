@@ -269,6 +269,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (element.classList.contains('counted')) return;
         element.classList.add('counted');
 
+        const suffix = element.getAttribute('data-suffix') || '';
+        const prefix = element.getAttribute('data-prefix') || '';
+        const decimalsAttr = element.getAttribute('data-decimals');
+        const decimals = decimalsAttr !== null ? parseInt(decimalsAttr, 10) : (target % 1 === 0 ? 0 : 2);
+        const useComma = element.getAttribute('data-format') === 'comma';
+
         let current = 0;
         const duration = 2000; // ms
         const steps = 60;
@@ -280,19 +286,35 @@ document.addEventListener('DOMContentLoaded', () => {
             current += increment;
             count++;
             
-            if (target % 1 === 0) {
-                // Integer values
-                element.textContent = Math.floor(current) + (target >= 100 ? 'M+' : '+');
+            let displayValue = current;
+            if (decimals > 0) {
+                displayValue = current.toFixed(decimals);
             } else {
-                // Floating values (like 99.99%)
-                element.textContent = current.toFixed(2) + '%';
+                displayValue = Math.floor(current);
             }
+
+            if (useComma) {
+                displayValue = parseFloat(displayValue).toLocaleString('en-US', {
+                    minimumFractionDigits: decimals,
+                    maximumFractionDigits: decimals
+                });
+            }
+
+            element.textContent = prefix + displayValue + suffix;
 
             if (count >= steps) {
                 clearInterval(timer);
-                element.textContent = target % 1 === 0 
-                    ? target + (target >= 100 ? 'M+' : '+')
-                    : target.toFixed(2) + '%';
+                let finalValue = target;
+                if (decimals > 0) {
+                    finalValue = target.toFixed(decimals);
+                }
+                if (useComma) {
+                    finalValue = parseFloat(finalValue).toLocaleString('en-US', {
+                        minimumFractionDigits: decimals,
+                        maximumFractionDigits: decimals
+                    });
+                }
+                element.textContent = prefix + finalValue + suffix;
             }
         }, stepTime);
     }

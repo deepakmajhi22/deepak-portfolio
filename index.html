@@ -154,10 +154,10 @@
             <div class="stats-container">
                 <div class="stat-card glass-panel scroll-reveal">
                     <div class="stat-icon-wrapper purple-glow">
-                        <i class="fa-solid fa-users"></i>
+                        <i class="fa-solid fa-users-viewfinder"></i>
                     </div>
                     <div class="stat-info">
-                        <h3 class="stat-number" data-target="220">220K+</h3>
+                        <h3 class="stat-number" data-target="220" data-suffix="M+">220M+</h3>
                         <p class="stat-label">Annual Interactions Impacted</p>
                     </div>
                 </div>
@@ -167,7 +167,7 @@
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
                     <div class="stat-info">
-                        <h3 class="stat-number" data-target="8.07">8.07</h3>
+                        <h3 class="stat-number" data-target="8.07" data-decimals="2" data-suffix=" GPA">8.07 GPA</h3>
                         <p class="stat-label">B.Tech GPA (NIT Jaipur)</p>
                     </div>
                 </div>
@@ -177,8 +177,18 @@
                         <i class="fa-solid fa-circle-nodes"></i>
                     </div>
                     <div class="stat-info">
-                        <h3 class="stat-number" data-target="500">500+</h3>
+                        <h3 class="stat-number" data-target="3663" data-format="comma" data-suffix="+">3,663+</h3>
                         <p class="stat-label">Professional Connections</p>
+                    </div>
+                </div>
+
+                <div class="stat-card glass-panel scroll-reveal">
+                    <div class="stat-icon-wrapper cyan-glow">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number" data-target="14158" data-format="comma">14,158</h3>
+                        <p class="stat-label">Cumulative Impressions <span class="stat-growth-badge"><i class="fa-solid fa-arrow-trend-up"></i> +48.7%</span></p>
                     </div>
                 </div>
             </div>
@@ -366,7 +376,7 @@
                         <h3 class="role-title">Software Development Engineer Intern</h3>
                         <span class="role-location"><i class="fa-solid fa-location-dot"></i> Hyderabad, India &middot; On-site</span>
                         <ul class="role-achievements" style="margin-top: 10px;">
-                            <li>Designed and delivered production features that improved customer-facing workflows, impacting <strong>220K+</strong> annual customer interactions.</li>
+                            <li>Designed and delivered production features that improved customer-facing workflows, impacting <strong>220M+</strong> annual customer interactions.</li>
                             <li>Collaborated across multiple teams and systems to drive integration and schema improvements, reducing migration effort and improving engineering efficiency.</li>
                             <li>Implemented idempotent processing mechanisms for large-scale workflows, improving data reliability across millions of weekly records.</li>
                             <li>Took end-to-end ownership across design, implementation, testing, rollout planning, and cross-team execution.</li>
@@ -766,14 +776,14 @@
                                 <label for="name">Sender Name</label>
                                 <div class="input-container">
                                     <i class="fa-solid fa-user input-icon"></i>
-                                    <input type="text" id="name" required placeholder="Gajala (Washington D.C.)">
+                                    <input type="text" id="name" name="name" required placeholder="Gajala (Washington D.C.)">
                                 </div>
                             </div>
                             <div class="input-wrapper">
                                 <label for="email">Return Channel (Email)</label>
                                 <div class="input-container">
                                     <i class="fa-solid fa-envelope input-icon"></i>
-                                    <input type="email" id="email" required placeholder="gajala@sonicsolutions.com">
+                                    <input type="email" id="email" name="email" required placeholder="gajala@sonicsolutions.com">
                                 </div>
                             </div>
                         </div>
@@ -782,7 +792,7 @@
                             <label for="subject">Transmission Subject</label>
                             <div class="input-container">
                                 <i class="fa-solid fa-circle-info input-icon"></i>
-                                <input type="text" id="subject" required placeholder="Scalability Collaboration Opportunity">
+                                <input type="text" id="subject" name="subject" required placeholder="Scalability Collaboration Opportunity">
                             </div>
                         </div>
 
@@ -790,7 +800,7 @@
                             <label for="message">Message Payload</label>
                             <div class="input-container select-textarea">
                                 <i class="fa-solid fa-comment-dots input-icon textarea-icon"></i>
-                                <textarea id="message" required placeholder="Initialize conversation regarding system design..." rows="5"></textarea>
+                                <textarea id="message" name="message" required placeholder="Initialize conversation regarding system design..." rows="5"></textarea>
                             </div>
                         </div>
 

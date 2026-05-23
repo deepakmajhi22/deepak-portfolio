@@ -657,7 +657,7 @@ button, input, textarea {
     margin: 0 auto;
     padding: 0 24px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
 }
 
@@ -720,6 +720,21 @@ button, input, textarea {
     font-size: 0.85rem;
     color: var(--text-secondary);
     font-weight: 500;
+}
+
+.stat-growth-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #10b981; /* Premium emerald green */
+    background: rgba(16, 185, 129, 0.08);
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-left: 6px;
+    vertical-align: middle;
+    border: 1px solid rgba(16, 185, 129, 0.15);
 }
 
 /* --- TIMELINE EXPERIENCE SECTION --- */
@@ -1490,7 +1505,7 @@ button, input, textarea {
     }
     
     .stats-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
     
@@ -1511,6 +1526,11 @@ button, input, textarea {
 @media (max-width: 768px) {
     :root {
         --header-height: 70px;
+    }
+    
+    .stats-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
     
     .nav-links, .nav-cta-btn {
