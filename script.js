@@ -351,6 +351,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const successModal = document.getElementById('success-modal');
     const closeModalBtn = document.getElementById('close-modal');
 
+    // DEVELOPER ACTION REQUIRED: Replace this endpoint with your free Formspree ID
+    // Register at https://formspree.io/ to get your secure form ID instantly!
+    const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORMSPREE_ID";
+
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
@@ -361,13 +365,59 @@ document.addEventListener('DOMContentLoaded', () => {
         const message = document.getElementById('message').value;
 
         // Custom high-tech visual transmission console feedback
-        console.log(`%c[SYSTEM PORTAL INITIALIZING...]`, 'color: #a855f7; font-weight: bold;');
-        console.log(`%cPayload encrypted: From=${name}, Email=${email}`, 'color: #06b6d4;');
-        console.log(`%cSubject: ${subject}`, 'color: #06b6d4;');
-        console.log(`%cTransmission packet successfully dispatched. Status: 202 Accepted.`, 'color: #22c55e; font-weight: bold;');
+        console.log(`%c[SYSTEM PORTAL INITIALIZING...]`, 'color: #6366f1; font-weight: bold;');
+        console.log(`%cPayload encrypted: From=${name}, Email=${email}`, 'color: #d4d4d8;');
+        console.log(`%cSubject: ${subject}`, 'color: #d4d4d8;');
 
-        // Display Success Modal
-        successModal.classList.add('open');
+        // If the developer has configured Formspree, send an AJAX post!
+        if (FORM_ENDPOINT && !FORM_ENDPOINT.includes("YOUR_FORMSPREE_ID")) {
+            const submitBtn = contactForm.querySelector('.btn-submit');
+            const submitBtnText = submitBtn.querySelector('span');
+            const originalText = submitBtnText.textContent;
+            
+            // Show dynamic transmitting status
+            submitBtnText.textContent = "Transmitting...";
+            submitBtn.disabled = true;
+
+            fetch(FORM_ENDPOINT, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    subject: subject,
+                    message: message
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log(`%cTransmission packet successfully dispatched. Status: 202 Accepted.`, 'color: #22c55e; font-weight: bold;');
+                    successModal.classList.add('open');
+                } else {
+                    alert("Transmission failed. Please check your Formspree ID or connection.");
+                }
+            })
+            .catch(error => {
+                console.error("Transmission error:", error);
+                alert("An error occurred while connecting to the transmitter portal.");
+            })
+            .finally(() => {
+                submitBtnText.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+        } else {
+            // Mock mode when Formspree is not yet registered
+            console.log(`%c[MOCK MODE] Transmission dispatched successfully. To receive REAL emails:`, 'color: #eab308; font-weight: bold;');
+            console.log(`%c1. Register a free account at https://formspree.io/`, 'color: #eab308;');
+            console.log(`%c2. Create a form to get your form ID (e.g. "xqdvyqzd")`, 'color: #eab308;');
+            console.log(`%c3. Enter your ID in script.js under FORM_ENDPOINT variable!`, 'color: #eab308;');
+            
+            // Display Success Modal anyway for mockup testing
+            successModal.classList.add('open');
+        }
     });
 
     closeModalBtn.addEventListener('click', () => {
